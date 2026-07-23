@@ -1,20 +1,26 @@
 # clash-cosim
+
+> [!WARNING]
+> This project is archived, no longer maintained, and should no longer be used.
+> It remains available only to preserve its source and history after being
+> split out of the `clash-lang/clash-compiler` repository.
+
 Cosimulation allows inline Verilog (todo: VHDL) to be run as if it were a normal Haskell function. This was originally written [as part of a Master's project](https://essay.utwente.nl/70777/) at the University of Twente by John Verheij. Since then, support for Clash synthesizable code has been added.
 
 TODO: re-add old examples
 
 ## Installation
-Download the source and in the source directory run:
+The project requires a C toolchain, `make`, and Icarus Verilog (including
+`vvp`). Download the source and, in the source directory, run:
 
 ```bash
-cabal install --only-dependencies
-cabal install
+cabal build all
 ```
 
-Ubuntu 16.04 and 18.04 are supported, but other Linux platforms will probably work too. Run tests with:
+Run the test suite with:
 
 ```bash
-runghc tests/test.hs
+cabal test all
 ```
 
 ## Examples
@@ -192,4 +198,3 @@ We solve (2), (3) and (5) by defining a quasiquoter parsing `${..}` constructs i
 * Implement VHDL cosimulation
 
 * Implement zero-argument functions ("generators")
-

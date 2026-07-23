@@ -57,8 +57,7 @@ custom-setup
 
 source-repository head
   type: git
-  location: https://github.com/clash-lang/clash-compiler.git
-  subdir: clash-cosim
+  location: https://github.com/clash-lang/clash-cosim.git
 
 Library
   default-language: Haskell2010
